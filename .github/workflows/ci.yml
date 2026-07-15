@@ -38,7 +38,7 @@ jobs:
         run: |
           docker build \
             -t ghcr.io/dagabriel237/keycloak-kafka-plugin:latest \
-            -t ghcr.io/dababriel237/keycloak-kafka-plugin:${{ github.sha }} \
+            -t ghcr.io/dagabriel237/keycloak-kafka-plugin:${{ github.sha }} \
             .
 
       - name: Push latest image
