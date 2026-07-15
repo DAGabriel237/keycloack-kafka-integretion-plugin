@@ -37,12 +37,12 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t ghcr.io/${{ github.repository_owner }}/keycloak-kafka-plugin:latest \
-            -t ghcr.io/${{ github.repository_owner }}/keycloak-kafka-plugin:${{ github.sha }} \
+            -t ghcr.io/dagabriel237/keycloak-kafka-plugin:latest \
+            -t ghcr.io/dababriel237/keycloak-kafka-plugin:${{ github.sha }} \
             .
 
       - name: Push latest image
-        run: docker push ghcr.io/${{ github.repository_owner }}/keycloak-kafka-plugin:latest
+        run: docker push ghcr.io/dagabriel237/keycloak-kafka-plugin:latest
 
       - name: Push SHA image
-        run: docker push ghcr.io/${{ github.repository_owner }}/keycloak-kafka-plugin:${{ github.sha }}
+        run: docker push ghcr.io/dagabriel237/keycloak-kafka-plugin:${{ github.sha }}
